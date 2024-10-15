@@ -4,21 +4,13 @@
     box-sizing: border-box;
 }
 
-:root {
-    --sect-bg-card: #141922;
-    --nav-bg: #141922;
-    --header-bg: #080b12;
-    --player-bg: #282828;
-
-    /* var * calc/layout */
-    --player-height: 100px;
-    --nav-width: 150px;
-    --header-h: 80px;
-}
-
 /*XXXXXXXXXXXXXXXXXX
 XXXXXXGENERALXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
+
+body {
+    font-family: Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic;
+}
 
 main {
     background-color: red;
@@ -37,38 +29,95 @@ XXXXXXXXXXXXXXXXXXX*/
 .navbar {
     height: 100%;
     background-color: var(--nav-bg);
-    width: var(--nav-width);
+    width: fit-content;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.navbar>* {
+.top-nav>*,
+.bottom-nav .download,
+.bottom-nav .profilo {
     padding: 0.8em;
 }
 
 .navbar a {
     text-decoration: none;
     color: lightgray;
+    font-size: 0.8rem;
 }
 
-.navbar li:hover a {
+.navbar li:hover a,
+.bottom-nav .download:hover a {
     color: #fff;
 }
 
 .logo svg {
-    width: 100px;
+    height: 30px;
 }
 
-.navigation svg {
+/* .show {
+    display: none;
+} */
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+.navigation span,
+.playlist {
+    display: none;
+}
+
+.navigation svg,
+.bottom-nav svg {
     width: 20px;
 }
 
+.navigation li,
+.playlist li {
+    padding: 0.2em;
+}
+
+.navigation li a,
+.playlist li a,
+.download,
+.profilo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.playlist h4 {
+    padding-bottom: 6px;
+}
+
+.download a,
+.profilo div {
+    display: none;
+}
+
+.profilo svg {
+    background-color: gray;
+    border-radius: 12px;
+    padding: 2px;
+}
+
+.profilo div {
+    font-weight: 700;
+}
 
 /*XXXXXXXXXXXXXXXXXX
 XXXXXXXXCOREXXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
 
 .core {
-    width: calc(100% - var(--nav-width));
+    width: 100%;
     background-color: lightgray;
 }
 
@@ -102,4 +151,30 @@ XXXXXXXXXXXXXXXXXXX*/
     height: var(--player-height);
     width: 100%;
     background-color: var(--player-bg);
+}
+
+@media screen and (min-width: 350px) {
+
+    .navbar {
+        width: var(--nav-width);
+    }
+
+    .hide {
+        display: inline-block;
+    }
+
+    .show {
+        display: none;
+    }
+
+    .navigation span,
+    .playlist {
+        display: inline-block;
+    }
+
+    .download a,
+    .profilo div {
+        display: inline-block;
+    }
+
 }
