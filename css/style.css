@@ -3,3 +3,103 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --sect-bg-card: #141922;
+    --nav-bg: #141922;
+    --header-bg: #080b12;
+    --player-bg: #282828;
+
+    /* var * calc/layout */
+    --player-height: 100px;
+    --nav-width: 150px;
+    --header-h: 80px;
+}
+
+/*XXXXXXXXXXXXXXXXXX
+XXXXXXGENERALXXXXXXX
+XXXXXXXXXXXXXXXXXXX*/
+
+main {
+    background-color: red;
+    height: calc(100vh - var(--player-height));
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+/*XXXXXXXXXXXXXXXXXX
+XXXXXXXNAVBARXXXXXXX
+XXXXXXXXXXXXXXXXXXX*/
+
+.navbar {
+    height: 100%;
+    background-color: var(--nav-bg);
+    width: var(--nav-width);
+    color: #fff;
+}
+
+.navbar>* {
+    padding: 0.8em;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.navbar li:hover a {
+    color: #fff;
+}
+
+.logo svg {
+    width: 100px;
+}
+
+.navigation svg {
+    width: 20px;
+}
+
+
+/*XXXXXXXXXXXXXXXXXX
+XXXXXXXXCOREXXXXXXXX
+XXXXXXXXXXXXXXXXXXX*/
+
+.core {
+    width: calc(100% - var(--nav-width));
+    background-color: lightgray;
+}
+
+
+/*XXXXXXXXXXXXXXXXXX
+XXXXXXXHEADERXXXXXXX
+XXXXXXXXXXXXXXXXXXX*/
+
+.header {
+    background-color: green;
+    height: var(--header-h);
+}
+
+/*XXXXXXXXXXXXXXXXXX
+XXXXXXXXWRAPXXXXXXXX
+XXXXXXXXXXXXXXXXXXX*/
+
+.wrapper {
+    background-color: pink;
+
+
+    /* quando header sarà fixed */
+    /* margin-top: var(--header-h); */
+}
+
+/*XXXXXXXXXXXXXXXXXX
+XXXXXXPLAYERXXXXXXXX
+XXXXXXXXXXXXXXXXXXX*/
+
+.player {
+    height: var(--player-height);
+    width: 100%;
+    background-color: var(--player-bg);
+}
