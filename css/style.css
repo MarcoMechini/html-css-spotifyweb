@@ -13,13 +13,24 @@ body {
 }
 
 main {
-    background-color: red;
     height: calc(100vh - var(--player-height));
     display: flex;
 }
 
 li {
     list-style: none;
+}
+
+.text-hover:hover a {
+    color: #fff;
+}
+
+.btn {
+    font-size: 0.7rem;
+    color: black;
+    text-decoration: none;
+    padding: 0.8em 1.6em;
+    border-radius: 2em;
 }
 
 /*XXXXXXXXXXXXXXXXXX
@@ -48,17 +59,20 @@ XXXXXXXXXXXXXXXXXXX*/
     font-size: 0.8rem;
 }
 
-.navbar li:hover a,
-.bottom-nav .download:hover a {
-    color: #fff;
-}
 
 .logo svg {
     height: 30px;
 }
 
-/* .show {
-    display: none;
+/* todo */
+/* #home {
+    display: flex;
+}
+
+#home:after {
+    content: "";
+    border: 1px solid red;
+    height: max-content;
 } */
 
 .hide {
@@ -127,8 +141,20 @@ XXXXXXXHEADERXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
 
 .header {
-    background-color: green;
+    background-color: var(--header-bg);
     height: var(--header-h);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header .btn {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.header .btn:hover {
+    font-size: 13px;
 }
 
 /*XXXXXXXXXXXXXXXXXX
