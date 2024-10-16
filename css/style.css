@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 /*XXXXXXXXXXXXXXXXXX
 XXXXXXGENERALXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
@@ -33,6 +38,13 @@ li {
     border-radius: 2em;
 }
 
+a {
+    text-decoration: none;
+    color: lightgray;
+    font-size: 0.8rem;
+}
+
+
 /*XXXXXXXXXXXXXXXXXX
 XXXXXXXNAVBARXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
@@ -52,13 +64,6 @@ XXXXXXXXXXXXXXXXXXX*/
 .bottom-nav .profilo {
     padding: 0.8em;
 }
-
-.navbar a {
-    text-decoration: none;
-    color: lightgray;
-    font-size: 0.8rem;
-}
-
 
 .logo svg {
     height: 30px;
@@ -132,9 +137,9 @@ XXXXXXXXXXXXXXXXXXX*/
 
 .core {
     width: 100%;
-    background-color: lightgray;
+    max-height: 100%;
+    overflow-y: auto;
 }
-
 
 /*XXXXXXXXXXXXXXXXXX
 XXXXXXXHEADERXXXXXXX
@@ -151,6 +156,7 @@ XXXXXXXXXXXXXXXXXXX*/
 .header .btn {
     color: #fff;
     border: 1px solid #fff;
+    margin-right: 1em;
 }
 
 .header .btn:hover {
@@ -162,11 +168,75 @@ XXXXXXXXWRAPXXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
 
 .wrapper {
-    background-color: pink;
-
+    background-color: var(--sect-bg-card);
 
     /* quando header sarà fixed */
     /* margin-top: var(--header-h); */
+}
+
+.categorie ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categorie li {
+    font-size: 0.7rem;
+    padding: 0.5em 0.2em;
+
+}
+
+.categorie a {
+    font-size: 0.7rem;
+    color: lightgray;
+    font-weight: 600;
+}
+
+.card-album {
+    /* background-color: red; */
+}
+
+.row {
+    padding: 0.8em;
+}
+
+.row>* {
+    padding: 8px 0;
+}
+
+.row>h2 {
+    color: #fff;
+}
+
+.sub-title {
+    color: lightgray;
+    font-size: 0.7rem;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100%/2 - 10px);
+}
+
+.card .title {
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.6em 0;
+}
+
+.card .artist {
+    font-size: 0.6rem;
+    color: lightgray;
 }
 
 /*XXXXXXXXXXXXXXXXXX
@@ -179,7 +249,7 @@ XXXXXXXXXXXXXXXXXXX*/
     background-color: var(--player-bg);
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 413px) {
 
     .navbar {
         width: var(--nav-width);
@@ -202,5 +272,14 @@ XXXXXXXXXXXXXXXXXXX*/
     .profilo div {
         display: inline-block;
     }
+
+}
+
+@media screen and (min-width: 780px) {
+
+    .card {
+        width: calc((100%/4 - 10px));
+    }
+
 
 }

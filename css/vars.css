@@ -1,8 +1,10 @@
 :root {
     --sect-bg-card: #141922;
-    --nav-bg: #141922;
+    --nav-bg: #000;
     --header-bg: #080b12;
     --player-bg: #282828;
+
+    --txt-color: #a3a3a3;
 
     /* var * calc/layout */
     --player-height: 100px;
