@@ -285,6 +285,7 @@ XXXXXXXXXXXXXXXXXXX*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 8px;
 }
 
 .player .center,
@@ -295,10 +296,20 @@ XXXXXXXXXXXXXXXXXXX*/
     align-items: center;
 }
 
-.player .description {
+.player .description,
+.center {
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.description span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.description a {
+    font-size: 0.6rem;
 }
 
 .player .left img {
@@ -323,9 +334,33 @@ XXXXXXXXXXXXXXXXXXX*/
     color: #fff;
 }
 
+.center .play-up>* {
+    padding: 0 4px;
+}
 
+.center .play-down {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.7rem;
+}
 
+.song-player {
+    position: relative;
+    width: 80px;
+    height: 3px;
+    background-color: grey;
+}
 
+.song-player::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+}
 
 /* RIGHT */
 
@@ -348,6 +383,7 @@ XXXXXXXXXXXXXXXXXXX*/
 
 
 
+/* MOBILE */
 
 @media screen and (min-width: 481px) {
 
@@ -375,32 +411,42 @@ XXXXXXXXXXXXXXXXXXX*/
 
 }
 
+
+/* TABLET  */
 @media screen and (min-width: 737px) {
 
     .card {
         width: calc((100%/4 - 10px));
     }
 
-    /* TODO CARD MEDIA QUERY */
-
-}
-
-@media screen and (min-width: 737px) {
-
-    .card {
-        width: calc((100%/4 - 10px));
+    .player .description {
+        flex-direction: row;
+        gap: 8px;
     }
 
-    /* TODO CARD MEDIA QUERY */
+    .song-player {
+        width: 150px;
+    }
+
+    .categorie a {
+        font-size: 0.8rem;
+    }
 
 }
 
+/* LAPTOP */
 @media screen and (min-width: 1280px) {
 
     .card {
         width: calc((100%/6 - 10px));
     }
 
-    /* TODO CARD MEDIA QUERY */
+    .song-player {
+        width: 450px;
+    }
+
+    .categorie a {
+        font-size: 1rem;
+    }
 
 }
