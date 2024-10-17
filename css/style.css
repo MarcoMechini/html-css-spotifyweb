@@ -179,6 +179,7 @@ XXXXXXXXXXXXXXXXXXX*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 5px;
 }
 
 .categorie li {
@@ -265,6 +266,14 @@ XXXXXXXXXXXXXXXXXXX*/
     transform: scale(3);
 }
 
+.artist img {
+    border-radius: 50%;
+}
+
+.artist .img:hover div {
+    border-radius: 50%;
+}
+
 /*XXXXXXXXXXXXXXXXXX
 XXXXXXPLAYERXXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
@@ -274,14 +283,73 @@ XXXXXXXXXXXXXXXXXXX*/
     width: 100%;
     background-color: var(--player-bg);
     display: flex;
-    justify-content: space-betweenx;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.player img {
-    width: 20px;
+.player .center,
+.player .right,
+.player .left {
+    color: #fff;
+    display: flex;
+    align-items: center;
 }
 
-@media screen and (min-width: 413px) {
+.player .description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.player .left img {
+    width: 30px;
+}
+
+.player .left>*,
+.player .right>* {
+    padding: 0 8px;
+}
+
+.player i {
+    display: inline-block;
+}
+
+.player .left i {
+    color: lightgrey;
+}
+
+.player .center i,
+.player .right i {
+    color: #fff;
+}
+
+
+
+
+
+/* RIGHT */
+
+.volume {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: grey;
+}
+
+.volume::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+}
+
+
+
+
+@media screen and (min-width: 481px) {
 
     .navbar {
         width: var(--nav-width);
@@ -307,10 +375,30 @@ XXXXXXXXXXXXXXXXXXX*/
 
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 737px) {
 
     .card {
         width: calc((100%/4 - 10px));
+    }
+
+    /* TODO CARD MEDIA QUERY */
+
+}
+
+@media screen and (min-width: 737px) {
+
+    .card {
+        width: calc((100%/4 - 10px));
+    }
+
+    /* TODO CARD MEDIA QUERY */
+
+}
+
+@media screen and (min-width: 1280px) {
+
+    .card {
+        width: calc((100%/6 - 10px));
     }
 
     /* TODO CARD MEDIA QUERY */
