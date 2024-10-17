@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpotyWeb</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./css/vars.css">
     <!-- <link rel="stylesheet" href="./css/dark.css"> -->
     <link rel="stylesheet" href="./css/style.css">
@@ -96,6 +100,16 @@
                                 <span>Nuova Playlist</span>
                             </a>
                         </li>
+                        <li class="text-hover">
+                            <a href="">
+                                <span>Nuova Playlist</span>
+                            </a>
+                        </li>
+                        <li class="text-hover">
+                            <a href="">
+                                <span>Nuova Playlist</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /PLAYLIST -->
@@ -156,32 +170,50 @@
                         <h2>Recently played</h2>
                         <div class="card-row">
                             <div class="card">
-                                <div class="img"><img src="./img/metal_lifting.jpg" alt="Heavy Metal"></div>
+                                <div class="img">
+                                    <img src="./img/metal_lifting.jpg" alt="Heavy Metal">
+                                    <div><i class="fa-regular fa-circle-play"></i></div>
+                                </div>
                                 <div class="title">Heavy Metal</div>
                                 <div class="artist">Subtitle</div>
                             </div>
                             <div class="card">
-                                <div class="img"><img src="./img/stranger.jpeg" alt="Stranger Things"></div>
+                                <div class="img">
+                                    <img src="./img/stranger.jpeg" alt="Stranger Things">
+                                    <div><i class="fa-regular fa-circle-play"></i></div>
+                                </div>
                                 <div class="title">Heavy Metal</div>
                                 <div class="artist">Subtitle</div>
                             </div>
                             <div class="card">
-                                <div class="img"><img src="./img/aquietplace.jpeg" alt="Aquiet place"></div>
+                                <div class="img">
+                                    <img src="./img/aquietplace.jpeg" alt="Aquiet place">
+                                    <div><i class="fa-regular fa-circle-play"></i></div>
+                                </div>
                                 <div class="title">A Quit Place</div>
                                 <div class="artist">Subtitle</div>
                             </div>
                             <div class="card">
-                                <div class="img"><img src="./img/Split.jpeg" alt="Split"></div>
+                                <div class="img">
+                                    <img src="./img/split.jpeg" alt="Split">
+                                    <div><i class="fa-regular fa-circle-play"></i></div>
+                                </div>
                                 <div class="title">Split</div>
                                 <div class="artist">Subtitle</div>
                             </div>
                             <div class="card">
-                                <div class="img"><img src="./img/cure.jpeg" alt="Blue bottle"></div>
+                                <div class="img">
+                                    <img src="./img/cure.jpeg" alt="Blue bottle">
+                                    <div><i class="fa-regular fa-circle-play"></i></div>
+                                </div>
                                 <div class="title">A cure for welness</div>
                                 <div class="artist">Subtitle</div>
                             </div>
                             <div class="card">
-                                <div class="img"><img src="./img/sinister.jpeg" alt="Sinister"></div>
+                                <div class="img">
+                                    <img src="./img/sinister.jpeg" alt="Sinister">
+                                    <div><i class="fa-regular fa-circle-play"></i></div>
+                                </div>
                                 <div class="title">Sinister</div>
                                 <div class="artist">Subtitle</div>
                             </div>
@@ -192,11 +224,17 @@
                         <div class="sub-title">Più ascolti, più accurati saranno i suggerimenti.</div>
                         <div class="card-row">
                             <div class="card">
-                                <div class="img"><img src="./img/radar.jpeg" alt="Radar"></div>
+                                <div class="img">
+                                    <img src="./img/radar.jpeg" alt="Radar">
+                                    <div><i class="fa-regular fa-circle-play"></i></div>
+                                </div>
                                 <div class="title">Release Radar</div>
                             </div>
                             <div class="card">
-                                <div class="img"><img src="./img/mixdaily.jpeg" alt="Daily Mix 1"></div>
+                                <div class="img">
+                                    <img src="./img/mixdaily.jpeg" alt="Daily Mix 1">
+                                    <div><i class="fa-regular fa-circle-play"></i></div>
+                                </div>
                                 <div class="title">Daily Mix 1</div>
                             </div>
                         </div>
@@ -210,8 +248,27 @@
     <!-- /MAIN -->
 
     <!-- BARRA DI RIPRODUZIONE -->
+    <!-- 
+    folder <i class="fa-regular fa-folder"></i>
+    play    <i class="fa-regular fa-circle-play"></i>
+    random <i class="fa-solid fa-shuffle"></i>
+    backward <i class="fa-solid fa-backward-step"></i>
+    forward <i class="fa-solid fa-forward-step"></i>
+    rotate <i class="fa-solid fa-rotate-right"></i>
+    fa-list-ul <i class="fa-solid fa-list-ul"></i>
+    fa-desktop <i class="fa-solid fa-display"></i>
+    fa-volume-up <i class="fa-solid fa-volume-high"></i>-->
     <footer class="player">
+        <div class="left">
+            <img src="./img/sinister.jpeg" alt="Sinister">
+            <div class="description">
 
+            </div>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-folder"></i>
+        </div>
+        <div class="center"></div>
+        <div class="right"></div>
     </footer>
     <!-- /BARRA DI RIPRODUZIONE -->
 </body>

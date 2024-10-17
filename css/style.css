@@ -50,6 +50,7 @@ XXXXXXXNAVBARXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
 
 .navbar {
+    overflow: auto;
     height: 100%;
     background-color: var(--nav-bg);
     width: fit-content;
@@ -156,11 +157,11 @@ XXXXXXXXXXXXXXXXXXX*/
 .header .btn {
     color: #fff;
     border: 1px solid #fff;
-    margin-right: 1em;
+    margin-right: 2em;
 }
 
 .header .btn:hover {
-    font-size: 13px;
+    transform: scale(1.2);
 }
 
 /*XXXXXXXXXXXXXXXXXX
@@ -239,6 +240,31 @@ XXXXXXXXXXXXXXXXXXX*/
     color: lightgray;
 }
 
+.img {
+    position: relative;
+}
+
+.img div {
+    display: none;
+}
+
+.img:hover div {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.img i {
+    transform: scale(3);
+}
+
 /*XXXXXXXXXXXXXXXXXX
 XXXXXXPLAYERXXXXXXXX
 XXXXXXXXXXXXXXXXXXX*/
@@ -247,6 +273,12 @@ XXXXXXXXXXXXXXXXXXX*/
     height: var(--player-height);
     width: 100%;
     background-color: var(--player-bg);
+    display: flex;
+    justify-content: space-betweenx;
+}
+
+.player img {
+    width: 20px;
 }
 
 @media screen and (min-width: 413px) {
@@ -281,5 +313,6 @@ XXXXXXXXXXXXXXXXXXX*/
         width: calc((100%/4 - 10px));
     }
 
+    /* TODO CARD MEDIA QUERY */
 
 }
